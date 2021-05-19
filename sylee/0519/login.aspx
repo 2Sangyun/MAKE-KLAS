@@ -186,7 +186,6 @@
         }
     </style>
     <script>
-        
     </script>
 
 </head>
@@ -199,7 +198,7 @@
             <p></p>
             <asp:TextBox ID="PwBox" runat="server"></asp:TextBox>
             <p></p>
-            <asp:Button ID="LoginBtn" runat="server" Text="로그인" OnClick="LoginBtn_Click" />
+            <asp:Button ID="LoginBtn" runat="server" Text="로그인" OnClick ="LoginBtn_Click"/>
             <p></p>
             <asp:CheckBox ID="CheckBox" runat="server" />
             <asp:Label ID="Label1" runat="server" Text="아이디저장"></asp:Label>
