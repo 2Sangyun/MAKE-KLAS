@@ -13,5 +13,10 @@ namespace LoginKlas
         {
 
         }
+
+        protected void Time_Load()
+        {
+            
+        }
     }
 }
