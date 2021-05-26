@@ -11,7 +11,17 @@ namespace LoginKlas
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            tablesch.Rows[2].Cells[2].Text = "abcd";
+        }
 
+        protected void Time_Load()
+        {
+            
+        }
+
+        protected void mainBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect(string.Format("WebMain.aspx?"));
         }
     }
 }
