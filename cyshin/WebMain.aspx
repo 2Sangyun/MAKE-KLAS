@@ -358,165 +358,67 @@
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow ID="Row2" runat="server" Height="50px">
-                <asp:TableCell ID="TableCell8" runat="server">
-                    0
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell9" runat="server">
-                    2행2열
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell10" runat="server">
-                    2행3열
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell11" runat="server">
-                    2행4열
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell12" runat="server">
-                    2행5열
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell13" runat="server">
-                    2행6열
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell14" runat="server">
-                    2행7열
-                </asp:TableCell>
+                <asp:TableCell ID="TableCell8" runat="server">0</asp:TableCell>
+                <asp:TableCell ID="TableCell9" runat="server"></asp:TableCell>
+                <asp:TableCell ID="TableCell10" runat="server"></asp:TableCell>
+                <asp:TableCell ID="TableCell11" runat="server"></asp:TableCell>
+                <asp:TableCell ID="TableCell12" runat="server"></asp:TableCell>
+                <asp:TableCell ID="TableCell13" runat="server"></asp:TableCell>
+                <asp:TableCell ID="TableCell14" runat="server"></asp:TableCell>
             </asp:TableRow>
             <asp:TableRow ID="Row3" runat="server" Height="50px">
-                <asp:TableCell ID="TableCell15" runat="server">
-                    1
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell16" runat="server">
-                    3행2열
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell17" runat="server">
-                    3행3열
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell18" runat="server">
-                    3행4열
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell19" runat="server">
-                    3행5열
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell20" runat="server">
-                    3행6열
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell21" runat="server">
-                    3행7열
-                </asp:TableCell>
+                <asp:TableCell ID="TableCell15" runat="server">1</asp:TableCell>
+                <asp:TableCell ID="TableCell16" runat="server"></asp:TableCell>
+                <asp:TableCell ID="TableCell17" runat="server"></asp:TableCell>
+                <asp:TableCell ID="TableCell18" runat="server"></asp:TableCell>
+                <asp:TableCell ID="TableCell19" runat="server"></asp:TableCell>
+                <asp:TableCell ID="TableCell20" runat="server"></asp:TableCell>
+                <asp:TableCell ID="TableCell21" runat="server"></asp:TableCell>
             </asp:TableRow>
             <asp:TableRow ID="Row4" runat="server" Height="50px">
-                <asp:TableCell ID="TableCell22" runat="server">
-                    2
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell23" runat="server">
-                    4행2열
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell24" runat="server">
-                    4행3열
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell25" runat="server">
-                    4행4열
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell26" runat="server">
-                    4행5열
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell27" runat="server">
-                    4행6열
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell28" runat="server">
-                    4행7열
-                </asp:TableCell>
+                <asp:TableCell ID="TableCell22" runat="server">2</asp:TableCell>
+                <asp:TableCell ID="TableCell23" runat="server"></asp:TableCell>
+                <asp:TableCell ID="TableCell24" runat="server"></asp:TableCell>
+                <asp:TableCell ID="TableCell25" runat="server"></asp:TableCell>
+                <asp:TableCell ID="TableCell26" runat="server"></asp:TableCell>
+                <asp:TableCell ID="TableCell27" runat="server"></asp:TableCell>
+                <asp:TableCell ID="TableCell28" runat="server"></asp:TableCell>
             </asp:TableRow>
             <asp:TableRow ID="Row5" runat="server" Height="50px">
-                <asp:TableCell ID="TableCell29" runat="server">
-                    3
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell30" runat="server">
-                    5행2열
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell31" runat="server">
-                    5행3열
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell32" runat="server">
-                    5행4열
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell33" runat="server">
-                    5행5열
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell34" runat="server">
-                    5행6열
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell35" runat="server">
-                    5행7열
-                </asp:TableCell>
+                <asp:TableCell ID="TableCell29" runat="server">3</asp:TableCell>
+                <asp:TableCell ID="TableCell30" runat="server"></asp:TableCell>
+                <asp:TableCell ID="TableCell31" runat="server"></asp:TableCell>
+                <asp:TableCell ID="TableCell32" runat="server"></asp:TableCell>
+                <asp:TableCell ID="TableCell33" runat="server"></asp:TableCell>
+                <asp:TableCell ID="TableCell34" runat="server"></asp:TableCell>
+                <asp:TableCell ID="TableCell35" runat="server"></asp:TableCell>
             </asp:TableRow>
             <asp:TableRow ID="Row6" runat="server" Height="50px">
-                <asp:TableCell ID="TableCell36" runat="server">
-                    4
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell37" runat="server">
-                    6행2열
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell38" runat="server">
-                    6행3열
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell39" runat="server">
-                    6행4열
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell40" runat="server">
-                    6행5열
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell41" runat="server">
-                    6행6열
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell42" runat="server">
-                    6행7열
-                </asp:TableCell>
+                <asp:TableCell ID="TableCell36" runat="server">4</asp:TableCell>
+                <asp:TableCell ID="TableCell37" runat="server"></asp:TableCell>
+                <asp:TableCell ID="TableCell38" runat="server"></asp:TableCell>
+                <asp:TableCell ID="TableCell39" runat="server"></asp:TableCell>
+                <asp:TableCell ID="TableCell40" runat="server"></asp:TableCell>
+                <asp:TableCell ID="TableCell41" runat="server"></asp:TableCell>
+                <asp:TableCell ID="TableCell42" runat="server"></asp:TableCell>
             </asp:TableRow>
             <asp:TableRow ID="Row7" runat="server" Height="50px">
-                <asp:TableCell ID="TableCell43" runat="server">
-                    5
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell44" runat="server">
-                    7행2열
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell45" runat="server">
-                    7행3열
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell46" runat="server">
-                    7행4열
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell47" runat="server">
-                    7행5열
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell48" runat="server">
-                    7행6열
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell49" runat="server">
-                    7행7열
-                </asp:TableCell>
+                <asp:TableCell ID="TableCell43" runat="server">5</asp:TableCell>
+                <asp:TableCell ID="TableCell44" runat="server"></asp:TableCell>
+                <asp:TableCell ID="TableCell45" runat="server"></asp:TableCell>
+                <asp:TableCell ID="TableCell46" runat="server"></asp:TableCell>
+                <asp:TableCell ID="TableCell47" runat="server"></asp:TableCell>
+                <asp:TableCell ID="TableCell48" runat="server"></asp:TableCell>
+                <asp:TableCell ID="TableCell49" runat="server"></asp:TableCell>
             </asp:TableRow>
             <asp:TableRow ID="Row8" runat="server" Height="50px">
-                <asp:TableCell ID="TableCell50" runat="server">
-                    6
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell51" runat="server">
-                    8행2열
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell52" runat="server">
-                    8행3열
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell53" runat="server">
-                    8행4열
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell54" runat="server">
-                    8행5열
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell55" runat="server">
-                    8행6열
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell56" runat="server">
-                    8행7열
-                </asp:TableCell>
+                <asp:TableCell ID="TableCell50" runat="server">6</asp:TableCell>
+                <asp:TableCell ID="TableCell51" runat="server"></asp:TableCell>
+                <asp:TableCell ID="TableCell52" runat="server"></asp:TableCell>
+                <asp:TableCell ID="TableCell53" runat="server"></asp:TableCell>
+                <asp:TableCell ID="TableCell54" runat="server"></asp:TableCell>
+                <asp:TableCell ID="TableCell55" runat="server"></asp:TableCell>
+                <asp:TableCell ID="TableCell56" runat="server"></asp:TableCell>
             </asp:TableRow>
         </asp:Table>
         </div>
