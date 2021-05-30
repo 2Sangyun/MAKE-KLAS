@@ -96,6 +96,66 @@ INSERT INTO `department` VALUES ('소프트웨어학부','소프트웨어융합�
 UNLOCK TABLES;
 
 --
+-- Table structure for table `notice_list`
+--
+
+DROP TABLE IF EXISTS `notice_list`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `notice_list` (
+  `course_id` varchar(14) NOT NULL,
+  `notice_id` int NOT NULL,
+  `notice_type` varchar(45) NOT NULL,
+  `title` varchar(45) NOT NULL,
+  `date` datetime NOT NULL,
+  `writer_id` varchar(10) NOT NULL,
+  `importance` tinyint DEFAULT NULL,
+  `content` mediumtext,
+  `file` varchar(45) DEFAULT NULL,
+  `hits` int DEFAULT NULL,
+  PRIMARY KEY (`course_id`,`notice_id`),
+  KEY `notice_writer_id_idx` (`writer_id`),
+  KEY `notice_type_idx` (`notice_type`),
+  CONSTRAINT `notice_course_id` FOREIGN KEY (`course_id`) REFERENCES `course` (`course_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `notice_type` FOREIGN KEY (`notice_type`) REFERENCES `notice_type` (`notice_type`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `notice_writer_id` FOREIGN KEY (`writer_id`) REFERENCES `person` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `notice_list`
+--
+
+LOCK TABLES `notice_list` WRITE;
+/*!40000 ALTER TABLE `notice_list` DISABLE KEYS */;
+INSERT INTO `notice_list` VALUES ('H030-3-0969-02',0,'강의 공지사항','익명게시판 답변영상 업로드 알림 (13주차 3회)','2021-05-29 14:14:00','2019203039',0,NULL,NULL,0),('H030-3-6899-01',0,'수시퀴즈','Motion Processing','2021-05-28 00:00:00','2019203039',0,NULL,NULL,0);
+/*!40000 ALTER TABLE `notice_list` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `notice_type`
+--
+
+DROP TABLE IF EXISTS `notice_type`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `notice_type` (
+  `notice_type` varchar(45) NOT NULL,
+  PRIMARY KEY (`notice_type`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `notice_type`
+--
+
+LOCK TABLES `notice_type` WRITE;
+/*!40000 ALTER TABLE `notice_type` DISABLE KEYS */;
+INSERT INTO `notice_type` VALUES ('강의 공지사항'),('강의 자료실'),('과제제출'),('설문참여'),('수시퀴즈'),('온라인시험'),('팀프로젝트');
+/*!40000 ALTER TABLE `notice_type` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `password`
 --
 
@@ -204,7 +264,7 @@ CREATE TABLE `section` (
 
 LOCK TABLES `section` WRITE;
 /*!40000 ALTER TABLE `section` DISABLE KEYS */;
-INSERT INTO `section` VALUES ('6030-2-0779-01',1,2021,'옥의관','205','화5','목6',NULL),('6030-2-1821-01',1,2021,'옥의관','101','화2','목1',NULL),('6030-2-9639-01',1,2021,'옥의관','207','월3','수4',NULL),('H030-2-1234-01',1,2021,NULL,NULL,'화3',NULL,NULL),('H030-3-0969-02',1,2021,'',NULL,'월6',NULL,NULL),('H030-3-3663-01',1,2021,'새빛관','204','화1','목2',NULL),('H030-3-6899-01',1,2021,'새빛관','204','월99','수5',NULL),('H030-3-8485-03',1,2021,'새빛관','301','금0','금1','금2');
+INSERT INTO `section` VALUES ('6030-2-0779-01',1,2021,'옥의관','205','화5','목6',NULL),('6030-2-1821-01',1,2021,'옥의관','101','화2','목1',NULL),('6030-2-9639-01',1,2021,'옥의관','207','월3','수4',NULL),('H030-2-1234-01',1,2021,NULL,NULL,'화3',NULL,NULL),('H030-3-0969-02',1,2021,'',NULL,'월6',NULL,NULL),('H030-3-3663-01',1,2021,'새빛관','204','화1','목2',NULL),('H030-3-6899-01',1,2021,'새빛관','204','','수5',NULL),('H030-3-8485-03',1,2021,'새빛관','301','금0','금1','금2');
 /*!40000 ALTER TABLE `section` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -275,4 +335,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-05-25 17:40:31
+-- Dump completed on 2021-05-30 16:55:00
