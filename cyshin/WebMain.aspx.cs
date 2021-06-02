@@ -11,7 +11,7 @@ namespace LoginKlas
     public partial class WebMain : System.Web.UI.Page
     {
         private MySqlConnection conn =
-            new MySqlConnection("Server=localhost;Database=klas;Uid=root;Pwd=alstn2512!;");
+            new MySqlConnection("Server=localhost;Database=klas;Uid=root;Pwd=blaze8411;");
         private MySqlCommand cmd = new MySqlCommand();
 
         private string ID = "2019203039";
@@ -97,6 +97,11 @@ namespace LoginKlas
         protected void mainBtn_Click(object sender, EventArgs e)
         {
             Response.Redirect(string.Format("WebMain.aspx?"));
+        }
+
+        protected void logoutBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect(string.Format("WebForm1.aspx?"));
         }
     }
 }

@@ -312,7 +312,7 @@
                </div>
                </div>
             </div> 
-            <asp:Button ID="logoutBtn" runat="server" Text="Logout =>"  />
+            <asp:Button ID="logoutBtn" runat="server" Text="Logout =>" OnClick="logoutBtn_Click"  />
             <asp:Button ID="student_informationBtn" runat="server" Text="학생_정보(default)"  />
 
         </div>
