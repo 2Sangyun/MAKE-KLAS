@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using MySql.Data.MySqlClient;
 
 namespace LoginKlas
 {
@@ -17,9 +18,26 @@ namespace LoginKlas
 
         protected void LoginBtn_Click(object sender, EventArgs e)
         {
-            Response.Redirect(string.Format("WebMain.aspx?"));
-            Response.Write(IdBox.Text);
-            Response.Write(PwBox.Text);
+            string myConnection = "datasource = localhost; port=3306; username = root; password=blaze8411";
+            MySqlConnection myConn = new MySqlConnection(myConnection);
+
+            MySqlCommand cmd = new MySqlCommand("select * from klas.password ", myConn);
+
+            myConn.Open();
+
+            MySqlDataReader rd = cmd.ExecuteReader();
+            while (rd.Read())
+            {
+                string str = String.Format("{0}, {1}", rd["ID"], rd["password"]);
+                if (IdBox.Text == rd["ID"].ToString() && PwBox.Text == rd["password"].ToString())
+                {
+                    Response.Redirect(string.Format("WebMain.aspx?"));
+                    break;
+                }
+            }
+
+            rd.Close();
+            myConn.Close();
         }
 
         protected void FindPwBtn_Click(object sender, EventArgs e)
