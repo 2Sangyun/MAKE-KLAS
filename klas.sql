@@ -108,8 +108,6 @@ CREATE TABLE `homework` (
   `title` varchar(45) NOT NULL,
   `init_date` datetime NOT NULL,
   `deadline` datetime NOT NULL,
-  `second_deadline` datetime DEFAULT NULL,
-  `submit_state` tinyint NOT NULL,
   `content` mediumtext,
   `submit_form` varchar(45) DEFAULT NULL,
   `file` varchar(45) DEFAULT NULL,
@@ -124,6 +122,7 @@ CREATE TABLE `homework` (
 
 LOCK TABLES `homework` WRITE;
 /*!40000 ALTER TABLE `homework` DISABLE KEYS */;
+INSERT INTO `homework` VALUES ('6030-2-0779-01',0,'기말고사 기출문제','2021-06-09 00:00:00','2021-06-10 16:30:00','작년 기말고사 문제입니다. 따로 제출은 안하셔도 됩니다.','wav',NULL),('H030-3-0969-02',0,'알고리즘 3차과제','2021-06-02 00:00:00','2021-06-04 23:59:59','test','.zip','test.txt');
 /*!40000 ALTER TABLE `homework` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -241,7 +240,7 @@ CREATE TABLE `person` (
 
 LOCK TABLES `person` WRITE;
 /*!40000 ALTER TABLE `person` DISABLE KEYS */;
-INSERT INTO `person` VALUES ('1234567890','김교수','남','소프트웨어학부','교수','19600101','01012345678'),('2019203039','송민수','남','소프트웨어학부','학부생','19990423','01092776792');
+INSERT INTO `person` VALUES ('1234567890','김교수','남','소프트웨어학부','교수','19600101','01012345678'),('2019203039','송민수','남','소프트웨어학부','학부생','19990423','01092776792'),('2020202020','홍길동','남','수학과','학부생','20010101','01001010101');
 /*!40000 ALTER TABLE `person` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -337,7 +336,8 @@ CREATE TABLE `submit_hw` (
   `course_id` varchar(14) NOT NULL,
   `hw_id` int NOT NULL,
   `file` varchar(45) DEFAULT NULL,
-  `title` varchar(45) NOT NULL,
+  `title` varchar(45) DEFAULT NULL,
+  `state` varchar(10) NOT NULL,
   `content` mediumtext,
   PRIMARY KEY (`course_id`,`hw_id`,`student_id`),
   KEY `hw_student_id` (`student_id`),
@@ -352,6 +352,7 @@ CREATE TABLE `submit_hw` (
 
 LOCK TABLES `submit_hw` WRITE;
 /*!40000 ALTER TABLE `submit_hw` DISABLE KEYS */;
+INSERT INTO `submit_hw` VALUES ('2019203039','6030-2-0779-01',0,'test.txt','11','제출','11'),('2019203039','H030-3-0969-02',0,NULL,'111','제출','111'),('2020202020','H030-3-0969-02',0,NULL,NULL,'미제출',NULL);
 /*!40000 ALTER TABLE `submit_hw` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -381,7 +382,7 @@ CREATE TABLE `takes` (
 
 LOCK TABLES `takes` WRITE;
 /*!40000 ALTER TABLE `takes` DISABLE KEYS */;
-INSERT INTO `takes` VALUES ('2019203039','6030-2-0779-01',1,2021,NULL),('2019203039','6030-2-1821-01',1,2021,NULL),('2019203039','6030-2-9639-01',1,2021,NULL),('2019203039','H030-2-1234-01',1,2021,NULL),('2019203039','H030-3-0969-02',1,2021,NULL),('2019203039','H030-3-3663-01',1,2021,NULL),('2019203039','H030-3-6899-01',1,2021,NULL),('2019203039','H030-3-8485-03',1,2021,NULL);
+INSERT INTO `takes` VALUES ('2019203039','6030-2-0779-01',1,2021,NULL),('2019203039','6030-2-1821-01',1,2021,NULL),('2019203039','6030-2-9639-01',1,2021,NULL),('2019203039','H030-2-1234-01',1,2021,NULL),('2019203039','H030-3-0969-02',1,2021,NULL),('2019203039','H030-3-3663-01',1,2021,NULL),('2019203039','H030-3-6899-01',1,2021,NULL),('2019203039','H030-3-8485-03',1,2021,NULL),('2020202020','6030-2-0779-01',1,2021,NULL),('2020202020','H030-3-0969-02',1,2021,NULL);
 /*!40000 ALTER TABLE `takes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -423,4 +424,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-06-08 13:11:15
+-- Dump completed on 2021-06-11  0:43:18
